@@ -9,7 +9,7 @@ import getActiveClasses from "./endPoints/getActiveClasses";
 
 
 
-dotenv.config()
+/* dotenv.config()
 
 const connection = knex ({ // Estabelece conexão com o banco
     client: "mysql",
@@ -23,7 +23,7 @@ const connection = knex ({ // Estabelece conexão com o banco
     }
    })
 
-   export default connection
+   export default connection */
 
 const app = express()
 app.use(express.json());

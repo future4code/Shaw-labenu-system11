@@ -1,10 +1,10 @@
 CREATE TABLE students (
 id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(50) NOT NULL,
+name VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL UNIQUE,
-data_nasc DATE NOT NULL,
-turma_id INT NOT NULL,
-FOREIGN KEY (turma_id) REFERENCES class(id)
+birth_date DATE NOT NULL,
+class_id INT NOT NULL,
+FOREIGN KEY (class_id) REFERENCES class(id)
 );
 
 CREATE TABLE hobby (

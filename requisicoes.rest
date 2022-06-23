@@ -2,11 +2,21 @@ POST  http://localhost:3003/class
 Content-Type: application/json
 
 {
-    "Class_Name":"",
-    "Initial_Date":"",
-    "Final_Date":"",
-    "Module":"",
-    "tipo": ""
+    "Class_Name":"shaw",
+    "Initial_Date":"02/02/2022",
+    "Final_Date":"12/06/22",
+    "Module":5,
+    "tipo": "integral"
 
 }
+###
+POST http://localhost:3003/studentsnew
+Content-Type: application/json
 
+{
+    "name": "Regiscleia",
+    "birth_date":"13/05/1995",
+    "email": "regiscleia@email.com",
+    
+    
+}

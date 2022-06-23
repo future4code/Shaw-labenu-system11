@@ -10,9 +10,9 @@ export default async function getActiveClasses(
 
       const id = req.params.id
 
-      /*const result = await connection.raw(`
+      const result = await connection.raw(`
          SELECT * FROM students WHERE id = ${id};
-      `)*/
+      `)
       
       res.status(201).send({student: result[0] })                                                                                                                                                                              
 
