@@ -1,0 +1,10 @@
+CREATE TABLE class (
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50) NOT NULL,
+data_inicio DATE NOT NULL,
+data_final DATE NOT NULL,
+modulo INT NOT NULL
+); 
+
+
+
