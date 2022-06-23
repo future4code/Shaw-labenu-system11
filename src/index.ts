@@ -4,9 +4,8 @@ import knex  from "knex";
 import * as dotenv from 'dotenv';
 import { getStudents } from "./endpoints/searchStudents";
 import { createStudent } from "./endpoints/CreateStudents";
-
- 
 import createClass from "./endPoints/createClass";
+import getActiveClasses from "./endPoints/getActiveClasses";
 
 
 
@@ -32,13 +31,14 @@ app.use(cors());
 
 
 
+
 //**→ Criar turma**
 app.post("/class", createClass);
 
 //**→ Buscar turmas ativas**
-
+app.get("./activeclasses", getActiveClasses );
 //**→ Mudar turma de módulo**
-
+app.put("/muduleedit/:id", )
 
 
 //**→ Criar estudante**
