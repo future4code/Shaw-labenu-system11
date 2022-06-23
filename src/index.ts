@@ -2,6 +2,10 @@ import * as express from "express";
 import * as cors from "cors";
 import knex  from "knex";
 import * as dotenv from 'dotenv';
+import { getStudents } from "./endpoints/searchStudents";
+import { createStudent } from "./endpoints/CreateStudents";
+
+ 
 import createClass from "./endPoints/createClass";
 
 
@@ -38,10 +42,11 @@ app.post("/class", createClass);
 
 
 //**→ Criar estudante**
-
+app.post("/studentsnew", createStudent )
 //**→ Buscar estudantes através do nome**
-
+app.get("./students", getStudents )
 //**→ Mudar estudante de turma**
+app.put("/studentsedit/:id")
 
 
 
