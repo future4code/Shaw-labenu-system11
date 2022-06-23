@@ -1,8 +1,8 @@
 export type estudantes ={
     id: string,
-    nome: string,
+    name: string,
     email: string,
-    data_nasc: Date,
-    turma_id: string
+    birth_date: Date,
+    class_id: string
 
 }
