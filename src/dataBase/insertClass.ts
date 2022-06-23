@@ -1,5 +1,6 @@
 import connection from "../connection";
 import { TYPE_CLASS } from "../types/typeClass";
+import getNewDate from "../util";
 
 export default async function insertClass(
     Id_Class: number,
@@ -9,11 +10,14 @@ export default async function insertClass(
     Module:number,
     tipo: TYPE_CLASS
 ) {
+
+    const data_initial = getNewDate(Initial_Date);
+    const data_fim = getNewDate(Final_Date);
     await connection.insert({
     Id_Class,
     Class_Name ,
-    Initial_Date,
-    Final_Date,
+    data_initial,
+    data_fim,
     Module,
     tipo
     }).into('class')

@@ -1,5 +1,4 @@
-export type Class ={
-    Id_Class:number,
+export type Class ={    
     Class_Name:string,
     Initial_Date:string,
     Final_Date:string,
