@@ -12,7 +12,7 @@ export const createStudent = async (
     const dia = split[0];
     const mes = split[1];
     const ano = split[2];
-    
+
     const resultado = insertDb(req.body);
     res.send(resultado).status(201);
   } catch (error: any) {
