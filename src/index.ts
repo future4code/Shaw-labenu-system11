@@ -6,10 +6,11 @@ import { getStudents } from "./endpoints/searchStudents";
 import { createStudent } from "./endpoints/CreateStudents";
 import createClass from "./endPoints/createClass";
 import getActiveClasses from "./endPoints/getActiveClasses";
+import { createTeacher } from "./endpoints/createTeacher";
 
 
 
-/* dotenv.config()
+ /*dotenv.config()
 
 const connection = knex ({ // Estabelece conexão com o banco
     client: "mysql",
@@ -23,8 +24,8 @@ const connection = knex ({ // Estabelece conexão com o banco
     }
    })
 
-   export default connection */
-
+   export default connection 
+*/
 const app = express()
 app.use(express.json());
 app.use(cors());
@@ -44,14 +45,14 @@ app.put("/muduleedit/:id", )
 //**→ Criar estudante**
 app.post("/studentsnew", createStudent )
 //**→ Buscar estudantes através do nome**
-app.get("./students", getStudents )
+app.get("/students", getStudents )
 //**→ Mudar estudante de turma**
 app.put("/studentsedit/:id")
 
 
 
 //**→ Criar docente**
-
+app.post("/createteacher",createTeacher )
 //**→ Buscar todas as pessoas docentes**
 
 //**→ Mudar docente de turma**

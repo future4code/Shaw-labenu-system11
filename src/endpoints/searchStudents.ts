@@ -1,26 +1,29 @@
 import connection from "../connection";
-import { Request, Response } from "express";
+import { query, Request, Response } from "express";
+import { estudantes } from "../types/typeStudents";
 
 export default async function selectStudents(name: string): Promise<any> {
-  const result = await connection.raw(`
-    select id,name, birth_date, class_id from estudantes where name = ${name}
-    `);
+  const query = `
+    select id,name,email, birth_date, class_id from students where name = "${name}"
+        `;
+  console.log(query);
+  const result = await connection.raw(query);
+  return result[0][0];
+
 }
+
 let statusCode = 400;
 export const getStudents = async (
   req: Request,
   res: Response
 ): Promise<any> => {
-  try {const { birth_date } = req.body;
-  const split = birth_date.split("/");
-  const dia = split[0];
-  const mes = split[1];
-  const ano = split[2];
-  
+  try {
     const name = req.query.name as string;
-    const student = await selectStudents(name);
+    const student: estudantes[] = await selectStudents(name);
 
-    if (!student.length) {
+    console.log(student);
+
+    if (!student) {
       res.status(404);
       throw new Error("estudante não existente");
     }

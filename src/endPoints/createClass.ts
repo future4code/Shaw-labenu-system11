@@ -44,7 +44,7 @@ export default async function createClass(
     //consultar o banco de dados
 
     await connection.raw(`
-        INSERT INTO class ( Class_Name, Initial_Date, Final_Date,Module)
+       INSERT INTO class ( Class_Name, Initial_Date, Final_Date,Module)
         VALUES(
             "${req.body.Class_Name}",
             "${getNewDate(req.body.Initial_Date)}",
