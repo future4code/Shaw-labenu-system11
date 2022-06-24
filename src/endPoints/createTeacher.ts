@@ -1,14 +1,13 @@
 import connection from "../connection";
-import { estudantes } from "../types/typeStudents";
-import { Request, Response } from "express";
 
-export const createStudent = async (
+import { Request, Response } from "express";
+import { teachers } from "../types/typeTeacher";
+
+export const createTeacher = async (
   req: Request,
   res: Response
 ): Promise<void> => {
   try {
-    
-
     const resultado = insertDb(req.body);
     res.send(resultado).status(201);
   } catch (error: any) {
@@ -17,8 +16,8 @@ export const createStudent = async (
   }
 };
 
-export const insertDb = async (student: estudantes): Promise<any> => {
-  const { name, birth_date, class_id, email } = student;
+export const insertDb = async (docente: teachers): Promise<any> => {
+  const { name, birth_date, class_id, email } = docente;
   const split = birth_date.split("/");
   const dia = split[0];
   const mes = split[1];
@@ -29,8 +28,8 @@ export const insertDb = async (student: estudantes): Promise<any> => {
       name: name,
       birth_date: new Date(`${ano}/${mes}/${dia}`),
       class_id: class_id,
-      email:email
+      email: email,
     })
-    .into("students");
+    .into("teacher");
   return resultado;
 };

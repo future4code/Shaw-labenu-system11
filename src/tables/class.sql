@@ -1,9 +1,10 @@
 CREATE TABLE class (
 id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(50) NOT NULL,
-data_inicio DATE NOT NULL,
-data_final DATE NOT NULL,
-modulo INT NOT NULL
+Class_Name VARCHAR(255) NOT NULL,
+Initial_Date DATE NOT NULL,
+ Final_Date DATE NOT NULL,
+ Module enum ("0","1","2","3","4","5","6","7")INT NOT NULL
+ tipo enum ("NOTURNO" , "INTEGRAL") not null
 ); 
 
 
