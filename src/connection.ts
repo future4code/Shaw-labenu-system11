@@ -1,5 +1,3 @@
-import * as express from "express";
-import * as cors from "cors";
 import knex  from "knex";
 import * as dotenv from 'dotenv';
 
