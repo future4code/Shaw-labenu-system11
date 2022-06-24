@@ -39,3 +39,9 @@ Content-Type: application/json
     "email": "gabrielmina@email.com",
     "class_id": 1
 }
+{
+    "name": "murilo",
+    "birth_date":"15/07/1989",
+    "email": "murilo@email.com",
+    "class_id": 2
+}
