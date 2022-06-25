@@ -2,12 +2,22 @@ POST  http://localhost:3003/class
 Content-Type: application/json
 
 {
-    "Class_Name":"shaw",
+    "Class_Name":"silveira",
     "Initial_Date":"02/02/2022",
     "Final_Date":"12/06/2022",
-    "Module":"5",
-    "tipo": "integral"
+    "Module":"2",
+    "tipo": "NOTURNO"
+}
 
+###
+GET http://localhost:3003/classes/active/2
+
+###
+PUT http://localhost:3003/class/1
+Content-Type: application/json
+
+{
+    "module": "2"    
 }
 
  
@@ -16,32 +26,45 @@ POST http://localhost:3003/studentsnew
 Content-Type: application/json
 
 {
-    "name": "Regiscleia",
-    "birth_date":"13/05/1995",
-    "email": "regiscleia@email.com",
+    "name": "Luiz",
+    "birth_date":"10/08/1994",
+    "email": "luiz@email.com",
     "class_id": 1
     
 }
 
 ###
- GET http://localhost:3003/students?name=Regiscleia
+PUT http://localhost:3003/student/edit/1
+Content-Type: application/json
+
+{    
+    "class_id": 2
+    
+}
+
+###
+ GET http://localhost:3003/teacher
+
+###
+ GET http://localhost:3003/students?name=Luiz
  
- ###
-
-
 ###
 POST http://localhost:3003/createteacher
 Content-Type: application/json
 
 {
-    "name": "Gabriel",
-    "birth_date":"11/03/1998",
-    "email": "gabrielmina@email.com",
-    "class_id": 1
-}
-{
     "name": "murilo",
     "birth_date":"15/07/1989",
     "email": "murilo@email.com",
+    "class_id": 1
+}
+
+###
+
+PUT http://localhost:3003/teacher/edit/1
+Content-Type: application/json
+
+{    
     "class_id": 2
+    
 }
